@@ -2,13 +2,28 @@ import java.util.Scanner;
 
 public class SumOfEvenNumbers {
     public static void main(String[] args) {     
-        // TODO: Step 1 - Get user input
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter an int: ");
+    int input = sc.nextInt();
+    int total = 0;
 
-        // TODO: Step 2 - Validate input
-        
-        // TODO: Step 3 - Calculate sum of even numbers
-        
-        // TODO: Step 4 - Display the result
+    if(input<2)
+    {
+        System.out.println("Error: Input must be 2 or greater.");
+    }
 
+    for(int count = 2; count <= input; count++)
+    {
+        if(count % 2 == 0)
+        {
+            total += count;
+        }
+        else
+        {
+            continue;
+        }
+        count += 1;
+    }
+    System.out.println("The sum of even numbers between " + 2 + " and " + input + " is " + total+ ".");
     }
 }
